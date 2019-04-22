@@ -19,6 +19,7 @@ namespace Waterverbruik
         {
             InitializeComponent();
         }
+
         Decimal Tarief1Verbruik = 0.25m;
         Decimal Tarief1 = 100;
         Decimal Tarief2Verbruik = 0.38m;
@@ -47,7 +48,7 @@ namespace Waterverbruik
                 else if (Radio0.Checked)
                     price = tarief(1, waterVerbruik) < tarief(2, waterVerbruik) ? tarief(1, waterVerbruik) : tarief(2, waterVerbruik);
             }
-            Output.Text = "Jouw kosten zijn €" + price.ToString("0.##");
+            Output.Text = "Jouw kosten zijn €" + price.ToString("0.##") + " per jaar";
         }
     }
 }
